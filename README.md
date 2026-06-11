@@ -1,73 +1,86 @@
-# React + TypeScript + Vite
+# SAMYUKT — Enterprise Technology & Digital Assets
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Empowering enterprises with modern technology solutions. 
 
-Currently, two official plugins are available:
+Samyukt is a technology company dedicated to transforming how modern organizations operate. We build custom software tools, refactor legacy databases, automate repetitive workflows, and curate professional video media assets (through Samyukt Studios) to help businesses, startups, and government agencies operate with peak efficiency.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This repository hosts the **Samyukt Landing Page and Interactive Client Portal**, featuring custom branding, dynamic pricing utilities, and responsive design systems.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 💎 Features Implemented
 
-## Expanding the ESLint configuration
+1. **Interactive Entry Sequence**: A custom geometric logo loader (`Loader.tsx`) with percentage status metrics validating secure page compilation.
+2. **Interactive Canvas Particles**: A responsive HTML5 canvas particle background in the Hero section (`Hero.tsx`) that acts as an ambient nodes network reacting to mouse movements and hover coordinates.
+3. **The Samyukt Method Flow**: An interactive click-to-transition 4-stage onboarding sequence (`Flow.tsx`) mapping how legacy workflows transition into cloud-ready automated models.
+4. **Capabilities Metrics Grid**: A 6-column glassmorphic capabilities card grid (`Features.tsx`) complete with neon hover accents, technical icons, and core corporate metrics (e.g. +24% efficiency, 99.9% uptime, 10M+ daily API requests).
+5. **Services Matrix**: A clean grid of available programs (`Services.tsx`) like Web Development (starting at $149) and Samyukt Studios alongside disabled "coming soon" enterprise modules (Consulting, Migration, custom API development).
+6. **Studios Reel Subscription Slider**: A tabbed subscription calculator (`Pricing.tsx`) with a range slider allowing companies to choose monthly reels retention retainers ($20 per reel: 10 reels $200 / 20 reels $400 / 30 reels $600) with responsive feature check lists.
+7. **Transition Accordion FAQs**: Collapsible FAQ answers (`FAQ.tsx`) solving data security, migration checksums, and scoping requests.
+8. **Giant Footer Panels**: Vectr-inspired large-type bottom navigation panels (`Footer.tsx`) featuring hover translations and sliding vector arrow animations.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Technology Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Core**: [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool**: [Vite](https://vite.dev/)
+- **Styling**: Vanilla CSS Variables (Design tokens supporting Dark & Light mode toggling)
+- **Icons**: [Lucide React](https://lucide.dev/) + Custom Inline SVGs
+- **Fonts**: Google Fonts (`Outfit` for headers, `Plus Jakarta Sans` for interface text)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 📁 Repository Structure
+
+```text
+SAMYUKT/
+├── public/                # Static assets and site icons
+├── src/
+│   ├── assets/            # Local asset folder
+│   ├── components/        # Sub-modules
+│   │   ├── FAQ.tsx        # Accordion questions
+│   │   ├── Features.tsx   # Capabilities grid
+│   │   ├── Flow.tsx       # Onboarding flow
+│   │   ├── Footer.tsx     # Large link panels
+│   │   ├── Header.tsx     # Sticky navigation & Theme toggle
+│   │   ├── Hero.tsx       # Canvas animated banner
+│   │   ├── Loader.tsx     # Custom intro screen
+│   │   ├── Pricing.tsx    # Reel calculator & Web dev tabs
+│   │   └── Services.tsx   # Available & roadmap items
+│   ├── App.tsx            # Main layout container
+│   ├── index.css          # Core design system & theme variables
+│   └── main.tsx           # Entry React client mounting
+├── index.html             # SEO meta-tags & page title
+├── package.json           # Scripts & modules
+└── tsconfig.json          # TypeScript build rules
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+To launch the project locally:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/prabhat-joshi-official/Samyukt.git
+   cd Samyukt
+   ```
+
+2. **Install node dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Expose development server**:
+   ```bash
+   npm run dev
+   ```
+   *The page will be live on [http://localhost:5173/](http://localhost:5173/).*
+
+4. **Verify production bundle**:
+   Ensure the TypeScript compilation and CSS assets bundle successfully with zero errors:
+   ```bash
+   npm run build
+   ```
